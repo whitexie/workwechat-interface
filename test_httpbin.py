@@ -8,3 +8,7 @@ class TestHttpBin(unittest.TestCase):
         url = "http://httpbin.org/get"
         resp = requests.get(url)
         assert resp.status_code == 200
+
+
+if __name__ == '__main__':
+    unittest.main()
