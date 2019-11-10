@@ -15,4 +15,6 @@ install:
   - pip install poetry
   - poetry install -vvv
 script:
-  - python test_httpbin.py
+  - poetry run coverage run --source=test_httpbin -m unittest discover
+  - poetry run coverage report
+  - poetry run coveralls
