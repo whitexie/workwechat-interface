@@ -1,9 +1,6 @@
 request:
     url: 'http://httpbin.org/get'
     method: 'get'
-    proxies:
-        'http': 'http://127.0.0.1:8080'
-        'https': 'http://127.0.0.1:8080'
     headers:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
 validate:
