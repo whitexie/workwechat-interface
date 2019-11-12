@@ -32,7 +32,7 @@ def run_api(api_info: dict):
 
     resp = session.request(method, url, **request)
 
-    validator_mapping = api_info['validate']
+    validator_mapping = api_info.get('validate')
     for key, value in validator_mapping.items():
         if '$' in key:
             actual_value = extract_json_field(resp, key)
