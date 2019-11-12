@@ -1,6 +1,6 @@
 request:
-    url: 'http://httpbin.org/get'
-    method: 'get'
+    url: 'http://httpbin.org/post'
+    method: 'post'
     proxies:
         'http': 'http://127.0.0.1:8080'
         'https': 'http://127.0.0.1:8080'
@@ -8,3 +8,4 @@ request:
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
 validate:
     status_code: 200
+    $.url: 'https://httpbin.org/post'

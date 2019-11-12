@@ -10,4 +10,4 @@ class TestLoader(unittest.TestCase):
         """
         yaml_file_path = os.path.join(os.path.dirname(__file__), 'api', 'httpbin_get.yml')
         json_object = load_yaml(yaml_file_path)
-        self.assertEqual(json_object['url'], 'http://httpbin.org/get')
+        self.assertEqual(json_object['request']['url'], 'http://httpbin.org/get')
