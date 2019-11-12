@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.5"
 requests = "^2.22.0"
 PyYAML = "^5.1"
+jsonpath = "^0.82.0"
 
 [tool.poetry.dev-dependencies]
 coverage = "^4.5.4"
