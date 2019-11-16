@@ -1,0 +1,28 @@
+- step:
+    request:
+        url: 'http://mubu.com/'
+        mehtod: 'GET'
+        headers:
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    validate:
+        status_code: 200
+- step:
+    request:
+        method: 'GET'
+        url: 'https://mubu.com/login/password'
+        headers:
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+    validate:
+        status_code: 200
+- step:
+    request:
+        url: 'https://mubu.com/api/login/submit'
+        method: 'POST'
+        headers:
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36'
+        data:
+            phone: '18520120234'
+            password: 'ye0201..'
+            remember: True
+    validate:
+        status_code: 200

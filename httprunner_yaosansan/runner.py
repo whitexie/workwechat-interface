@@ -1,5 +1,7 @@
 import requests
 import jsonpath
+from httprunner_yaosansan.loader import load_yaml
+from httprunner_yaosansan.validate import is_api, is_testcase
 
 session = requests.session()
 
@@ -42,3 +44,15 @@ def run_api(api_info: dict):
         assert actual_value == value
     return True
 
+
+def run_yaml(yaml_file_path: str):
+    yaml_dict = load_yaml(yaml_file_path)
+    results = []
+    if is_testcase(yaml_dict):
+        for item in yaml_dict:
+            results.append(run_api(item['step']))
+    elif is_api(yaml_dict):
+        results.append(run_api(yaml_dict))
+
+    print('result---------', results)
+    return results
